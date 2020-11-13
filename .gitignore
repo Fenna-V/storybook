@@ -23,6 +23,6 @@ pnpm-debug.log*
 *.sw?
 
 /storybook-static
+/coverage
 .jest-test-results.json
 
-/build-storybook.log

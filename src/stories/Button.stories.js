@@ -1,8 +1,11 @@
 import PhxButton from '../components/Button.vue';
+import results from '../../.jest-test-results.json';
+import { withTests } from '@storybook/addon-jest';
 
 export default {
   title: 'general/Button',
   component: PhxButton,
+  decorators: [withTests({ results })],
   argTypes: {
     type: { control: { type: 'select', options: ['primary', 'danger', 'warning', 'info'] } },
     size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
@@ -20,6 +23,10 @@ export const Primary = Template.bind({});
 Primary.args = {
   label: 'Button',
   icon: 'fas fa-plus'
+};
+
+Primary.parameters = {
+  jest: ['button.spec.js'],
 };
 
 export const Danger = Template.bind({});
