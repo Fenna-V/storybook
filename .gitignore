@@ -22,5 +22,7 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
+/storybook-static
 .jest-test-results.json
 
+/build-storybook.log
